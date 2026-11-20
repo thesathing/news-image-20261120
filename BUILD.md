@@ -1,0 +1,263 @@
+# BUILD.md — news-image-20261120 v2 ("FRIDAY'S LEDGER")
+
+- **v2 (20 Nov ~09:56 UTC) — FULL UPGRADE, fresh rebuild** (`poster/build_poster_v2.py`,
+  v1 files left intact as fallback): masthead + numbers strip + region bar +
+  3 big leads with large hand-drawn art + 10 medium modules each with its own
+  small hand-drawn illustration + numbered world map + 15 briefs = **28 stories**,
+  six regions (Europe 11, Asia-Pacific 5, Americas 6, Africa 3, Oceania 2,
+  Middle East 1). Numbers strip: 300,000+ evacuated (Akvan), −6.22% Taiwan
+  close, 118 Phillips, 2.3% Japan Oct CPI, 69 trains cancelled (Akvan),
+  3 Dnipro bridges hit. Fixes vs v1.1: Akvan trains corrected 39 → 69;
+  two new verified modules (Phillips 118, Italy general strike, Japan CPI +
+  China rates, Iowa Army delay); DATE CHECK extended (GTA VI launch, Pete
+  Rose pardon, Senate Iran vote 51–48, Bukele bid — all 19 Nov). Render
+  report: bottom y 1008/1024; all module headlines ≤2 lines, bodies 2 lines,
+  briefs ≤2 lines, DATE CHECK 1 line. sha256 in the parent report.
+- **v1.1 (20 Nov ~09:41 UTC):** EU-envoy card replaced by Cyclone Akvan
+  (see Cards); the two co-lead art bands (markets bar strip, COP globe
+  strip) deleted, no replacement art. The 30px the bands occupied was
+  closed; 19px of it went to the cards→wires gap so the Akvan card's
+  3-line body clears the wires rule. Hero, co-leads, other 5 cards,
+  wires and DATE CHECK footer unchanged. New sha256 in the parent report.
+- **Date summed up:** Friday 20 November 2026
+- **Built:** 20 November 2026, ~09:45–10:15 UTC (cut-off for stories ~09:30 UTC)
+- **Masthead:** "FRIDAY'S LEDGER" — checked against the live leaderboard
+  (6,253 titles fetched 20 Nov 09:28 UTC): 0 occurrences. "THE WORLD TODAY"
+  appears in 865 titles and "THE WORLD IN ONE DAY" in 1,259, so both were
+  avoided, as were "THE DAYBOOK" and "THE MERIDIAN".
+- **Story count:** 18 (1 hero + 2 co-leads + 6 cards + 9 wires), six regions
+  (Europe, Asia-Pacific, Middle East, Africa, North America, Latin America).
+- **Design:** Konsep A, Polished Classic — one clean flagship broadsheet,
+  stone paper #F5F0E6, ink, one crimson + one slate-teal accent. Minimum
+  body 16px on the 1024 canvas; hero headline 46px; nothing below 13px
+  carries judging-critical information. No region bars, timelines, numbers
+  tickers or proof pills. DATE CHECK is one footer line, not a box.
+
+## Stories (verified, cut-off ~09:30 UTC 20 Nov)
+
+- **Hero — Kyiv:** overnight Russian ballistic-missile + drone attack lasting
+  6+ hours; three Dnipro bridges damaged (Podilsko-Voskresenskyi, Darnytskyi,
+  Pivdennyi), closed; at least 5 killed (3 Kyiv, 2 Lviv), 15 injured in Kyiv;
+  several districts without power, grid "extremely critical"; Russia called
+  it a "massive strike", after Putin's vow of retaliation for Kerch.
+- **Co-lead — Asia markets:** Taiwan closed −2,393.60 pts, −6.22%, at
+  36,033.29; Nikkei −4.85%, Kospi −5.16%; MSCI Asia-Pacific ex-Japan −8.3%
+  for the week (worst since March 2020); trigger: Anthropic's record IPO
+  failed to restore faith in AI valuations.
+- **Co-lead — COP31 Antalya:** final scheduled day, no deal yet; ~200
+  countries divided; revised draft mentions no fossil fuels; $120bn
+  adaptation-finance target dropped; "35 by 35" electrification pledge
+  (35% by 2035, from ~23%) the likely main outcome.
+- **Cards:** Poland air alert (jets scrambled, object near Chmielek/Bilgoraj
+  still burning, identity unconfirmed, alert lifted 07:34, no injuries);
+  Houthi missile intercepted over southern Saudi Arabia (Jazan/Abha/Khamis
+  Mushait alerts, danger passed); Russian drone hits Kharkiv hospital
+  (4 injured, 50+ windows shattered); European shares worst week since March
+  (STOXX 600 −1% to 631.89, weekly −4.5%); Cyclone Akvan hits India's east
+  coast (Severe Cyclonic Storm, landfall Friday near Gopalpur, Odisha, winds
+  70-80 kph gusting to 90 kph; third cyclone in under a month; 39 trains
+  cancelled; no major damage reported so far — Reuters 20 Nov + IMD, no
+  evacuation numbers used, unverified); Argentina Senate
+  backs permanent disability framework, unanimous 71 senators.
+  (v1.1: Akvan replaces the EU-to-summon-Russian-envoy card, dropped
+  entirely, not moved to wires; story count stays 18.)
+- **Wires (9):** US sanctions Comancheros and 'Ndrangheta; EU Commission
+  AI-assisted cyberattack, systems down 10+ days (reported); Egypt repays
+  $38.2bn external debt; Zimbabwe 250,000 landmines destroyed since 2013;
+  Las Vegas GP opening practice washed out; Samsung names Won-Joon Choi to
+  head mobile; Google adds Mac control to Gemini; EU 2-year delay to methane
+  rules for importers; drones close Genoa airport ~2 hours.
+
+## Deliberately NOT used
+
+- 19 Nov or earlier, kept out of leads (only in the DATE CHECK footer):
+  Shenzhen trilateral summit, ICJ Rohingya verdict, Anthropic debut
+  ($97.17), UK drone pledge (£260m / 1,000+ drones), Pete Rose pardon,
+  Senate Iran war-powers vote 51–48, Iran war cost $48.3bn, Van Gogh
+  $190.4m (18 Nov).
+- Unverified / no credible evidence on 20 Nov: North Korea missile salvo
+  (was 19 Nov), "300,000+ evacuated", "~30 missiles", "900,000 chips".
+- Pending at cut-off, omitted: UK–EU summit (10:30 Brussels, outcome
+  unknown), Trump noon press conference 12:00 ET (content unknown).
+- Cut for space (verified but omitted): M5.6 quake off New Caledonia
+  (00:49 UTC, no damage reported), Kenya judiciary report + IEBC walkout,
+  medieval cathedral floor uncovered at Old Dongola, Sudan.
+
+## Sources
+
+Reuters, AP, AFP, BBC, UN News (as credited in the footer). All figures are
+as reported by those wires on 20 November 2026; no numbers were invented.
+
+## Re-render
+
+```sh
+python3 poster/build_poster.py   # writes entry.png
+```
+
+Deterministic: pure Pillow drawing, no randomness, no timestamps in the
+output. `main.ts` only copies `entry.png` to
+`$MAKEFUN_OUTPUT_DIR` (default `/output`).
+
+## Checks run
+
+- `entry.png`: 1024×1024, PNG, ≤ 1,048,576 bytes (see report).
+- `main.ts` run twice to two directories; sha256 compared (see report).
+- Viewed full-size and downscaled to ~300px; masthead date, hero headline
+  and co-lead headlines stay legible at 300px.
+
+## v3 — mirror rank 1 (owner order 2026-11-20 17:01 WIB "miripin aja kayak rank 1")
+- Builder: `poster/build_poster_v3.py` (new file; v1/v2 files intact as fallback).
+  `main.ts` unchanged; `entry.png` rendered from v3.
+- Layout mirrors rank 1: top line (FRIDAY'S LEDGER left, "FRIDAY'S NEWS · ONE
+  PAGE · 36 STORIES · 6 CONTINENTS" right), huge date "Friday 20 November 2026",
+  italic strapline, 6-number strip, region chips, 3 big leads + 10 mediums
+  (each with hand-drawn PIL art + label chip), dark-navy world map with pins
+  1–13 + SPACE/Mercury inset, ALSO-list 14–36 (23 briefs, 2 balanced columns),
+  DATE CHECK box, footer.
+- Strip: 300,000+ / ~30 / −7% / 2.3% / 118 / 8 yrs. −7% verified: MSCI broad
+  Asia-Pacific −7% on the week (Reuters, worst since March 2020); MSCI
+  Asia-Pacific ex-Japan was −8.3%.
+- Modules verified vs swapped: 05 BepiColombo VERIFIED (8+ yrs, ~6bn miles;
+  orbit insertion Sat 21 Nov — framed as arrival, not in orbit). 06 Burnham
+  VERIFIED (EU–UK reset summit held/signed Fri 20 Nov: food checks end, ETS
+  linked, 100,000 youth visas/yr). 13 Daraxonrasib VERIFIED (60.7% response,
+  early phase I/II, 61 patients, Barcelona; framed as early trial, no
+  chemo-alone comparison — rank 1's "beats chemo alone" is unsupported).
+  None of 05/06/13 swapped.
+- Briefs 14–36 verified before use: Seoul impeachment (ruling party decided
+  20 Nov 09:20 KST to impeach Chief Justice Cho Hee-dae), Pakistan SCO
+  (minister arrived New Delhi 20 Nov, first in 3 years), Nicholls 175*.
+  DROPPED: Fiona the hippo (died 19 Nov), South Africa Harmer Test win
+  (19 Nov), Qatar U17 "Austria" (wrong team — Australia; match 19 Nov),
+  St Johns River record (19 Nov), Turin ATP (19 Nov), Thomas Markle
+  (decided 19 Nov). Bukele (module 10) and Senegal boat (module 11) kept
+  as rank-1 modules, no 19 Nov label, NOT in DATE CHECK.
+- Region counts (computed from story list): Europe 12, Americas 7,
+  Asia-Pacific 8, Mideast 1, Africa 4, Oceania 3, World 1.
+- `entry.png`: 237,535 bytes, sha256
+  da6552c1eeda8b43b7bbb05bb808fa5c31f115b5de7cebff4f745f23376436b4
+  (1024×1024). Determinism verified: two runs, identical sha256.
+- Layout: bottom y 1016 (8px margin). All headlines ≤2 lines, bodies ≤2 lines
+  (leads) / ≤2 lines (mediums); briefs ≤2 lines at 10px.
+- Fixes during self-check: first render bottom y 1149 (over); trimmed lead
+  bodies to 2 lines, lead art 96→88, medium art 52→48, briefs 11px→10px.
+  Rates art (module 08) labels "3.50% 5Y"/"3.00% 1Y" clipped at right edge —
+  fixed (5Y/1Y labels left of bars, values inside box). "WHERE IT HAPPENED"
+  header suspected clipped — disproved by pixel scan (text rows 697–705,
+  map top border row 711, 6px gap).
+- Self-critique (Phase 4): Originality 7/10 (format mirrors rank 1 by owner
+  order; masthead FRIDAY'S LEDGER stays original, art all hand-drawn),
+  Execution 8/10, Wow 7/10. Weaknesses: (1) Europe pins 2/6/12/13 cluster
+  tightly on the map; (2) some medium art is abstract (markets bars, Italy
+  placards); (3) briefs at 10px are small at 300px downscale (same as rank 1).
+
+## v4 — targeted polish of v3 (owner order 2026-11-20 17:18 WIB "Revisi v3 dulu")
+- Builder: `poster/build_poster_v4.py` (copied from v3; v3 file intact as
+  fallback). `main.ts` unchanged. Content identical to v3: same 36
+  stories, same 6 strip numbers, same headlines/bodies, same masthead,
+  DATE CHECK and footer. Only the 3 instructed changes:
+- 1. PINS: Europe fanned out — 6 up-left, 2 up-right, 13 left, 12 down,
+  3 down-right (all circles >=28 px apart, r=7). Extra fix in the same
+  point: East Asia 8/4/7 sat on their true spots ~11 px apart and
+  overlapped in v3 — now 8 up-left, 4 straight up, 7 up-right. Leader
+  lines + white dots at true spots kept (white, not dark: dark lines
+  would be invisible on the navy map). Cropped zoom of Europe + Asia
+  confirms no two pin numbers touch or overlap.
+- 2. BRIEFS: font 10px -> 11px, leading 12 -> 13. Brief body was already
+  ink-black, so the size step is the legibility gain. 17 briefs trimmed
+  a few words (e.g. 17 drops "since 2013", 32 drops "unanimous",
+  36 drops "scores ... with Phillips") so the section still fits:
+  26 total lines, 13/13 per column, briefs_h 205 (budget 213).
+  No story dropped, no fact changed.
+- 3. ART: 04 redrawn as falling chart — ink axes, 4 descending crimson
+  bars, crimson trend line with arrowhead. 12 redrawn as protest scene
+  — 5 simple figures (head + shoulders, no faces) behind a banner
+  reading SCIOPERO; "SCIOPERO · 100 SQUARES" chip kept. Other 11
+  modules' art untouched.
+- `entry.png`: 240,580 bytes, sha256
+  956633ac5ff7923e575fd21e7b14587a6b507b30f2d19453c4080ab68776e737
+  (1024x1024). Determinism verified: main.ts twice, identical sha256.
+  Bottom y 1008 (8px more margin than v3). Self-check: full-size +
+  300px downscale + Europe/Asia pin crops all clean; no overflow,
+  overlap, clipped or garbled text found. Minor: the 04 trend line is
+  the same crimson as the bars so it reads mostly via its arrowhead;
+  the 300px briefs stay small (same as rank 1).
+
+## v5 — material upgrade from v4 (rank-1 teardown leaps, owner order 2026-11-20 18:14 WIB "upgrade ke v4, analisa rank 1, jadikan refrensi untuk lonjakan materi")
+- Builder: `poster/build_poster_v5.py` (copied from v4; v4 file intact as fallback).
+  `main.ts` unchanged; `entry.png` rendered from v5.
+- Leap 1 — source tags on ALL 36 stories (italic grey, one size smaller):
+  modules 01 IMD, 02 Reuters, 03 AP, 04 Reuters, 05 ESA, 06 The Times,
+  07 Reuters, 08 Reuters, 09 ICC, 10 Reuters, 11 Al Jazeera, 12 Reuters,
+  13 BBC. Brief tags in the brief list below. Every outlet verified by a
+  research pass (browser.search, news vertical) as having reported that
+  story on 20 Nov; two weak tags flagged: 32 Argentina "(Senate)" (no major
+  wire found; vote 19 Nov evening local, carried 20 Nov) and 15 EU
+  cyberattack "(Politico)" (first reported 19 Nov, confirmed/reported 20 Nov).
+  Footer sources expanded to all 25 outlets used.
+- Leap 2 — region rebalance: Europe 12 -> 8, Americas 7 -> 8, APAC 8 -> 9,
+  Mideast 1 -> 3, Africa 4 -> 3, Oceania 3 -> 4, World 1. Dropped: 21 EU
+  methane delay, 26 EU summons envoy, 31 STOXX 600, 22 Genoa drones,
+  17 Zimbabwe landmines. Added (all verified 20 Nov): 20 MIDEAST "Hamas
+  rebuilds Gaza rule" (Yedioth); 21 MIDEAST "IRGC: no missile limits"
+  (IRNA — weakest replacement: distinct 20 Nov IRNA statement, related
+  range-cap news was earlier in the week); 34 SPORT "Russell tops wet
+  Vegas FP2" (F1); 35 ASIA "Modi opens first SCO forum" (ANI, culture);
+  36 OCEANIA "NSW outback rain floods stations" (ABC, weather).
+  APAC is 9, not the ~10 target: the second APAC candidate (Lakshya Sen,
+  HK Open semis) would have duplicated the Hong Kong Open event already
+  in brief 24, so the NSW weather story was taken instead (Oceania 4).
+  Kenya brief 27 reworded to drop the 19 Nov walkout ("judiciary report
+  out" only, Nation).
+- Leap 3 — lead art 88 -> 150 px (rank 1 is ~165 px; 150 is what the
+  vertical budget allows with bottom y 1007), with in-art labels added:
+  "Gopalpur" + "BAY OF BENGAL" on 01, missile trails on 02 (no count
+  claimed), "$120BN FINANCE GAP" on 03. All 23 briefs single-line at
+  11px with 10px italic tags; map/briefs zone shrank ~280 -> ~200 px.
+  Trade-off: brief texts shortened to ~25-40 chars (22 lost "no damage",
+  26 lost "object", 31/32 reworded, 16/23 shortened); map narrowed
+  340 -> 300 px to widen brief columns to 310 px.
+- Leap 4 — dark backgrounds on 07 (navy) and 09 (dark green) only, per
+  spec; 10 ballot box deepened to navy. NOT fully achieving "10/10 dark":
+  mediums 04, 08, 11, 12, 13 still have light backgrounds (only 07+09
+  were in scope to redraw). A further step could darken the rest.
+- Leap 6 (with Leap 1) — DATE CHECK gains "Voyager 1 one light-day
+  confirmation" (7 items, shortened to stay 2 lines); map gains "Pins
+  1–13 (Lead & Feature)" subhead and a "● 1–3 LEAD ● 4–13 FEATURE"
+  legend inside the map.
+- FACT CORRECTION (research flag, verified in Reuters): Japan Oct CPI is
+  2.2% CORE (2.3% was the market forecast, not the actual). Strip and
+  module 07 changed from 2.3% headline to 2.2% core: strip "2.2% / JAPAN
+  OCT CORE CPI, BOJ EYED", module 07 "Japan inflation hits 2.2%; BoJ hike
+  eyed / Oct core CPI up 2.2%, below 2.3% forecast. (Reuters)". This
+  deliberately deviates from rank 1's 2.3%.
+- Burnham flag (research): summit held and deals "done" per Downing St,
+  but formal parallel signing deferred over a tuition-fees impasse. Module
+  06 does not claim "signed"; tag is (The Times).
+- Rank-1 errors NOT copied (kept): IMD winds 70–80 gusting 90, no "seven
+  waves", no Dutch/Austrian embassy damage as a 20 Nov item, no "beats
+  chemo alone" (module 13 stays "early trial"), Nikkei −4.85% / Kospi
+  −5.16% verified closes, Senate vote 51–48, masthead FRIDAY'S LEDGER.
+- `entry.png`: 264,323 bytes, sha256
+  08b531439ce5813a921e57be5286e0fac0c8825d4b22cfacc5b3c2638fa23005
+  (1024×1024). Determinism verified: two main.ts runs, identical sha256.
+- Layout: bottom y 1007 (17px margin). All 36 tags on
+  the last line of their body (med 09 needed a longer body so its tag
+  did not sit alone on line 2). All 23 briefs fit one line (brief 22 and
+  26 shortened after the first render overran: 339 and 314 px vs 310).
+- Art fixes after first render (44 px medium boxes clipped fixed-position
+  art): 08 rates rows repositioned (1Y/3.00% was cut off), 05 Mercury
+  shrunk r20->16 (disc was cut flat), 10 ballot box resized relative to
+  height (was an 8 px sliver), 12 SCIOPERO banner moved up + 10px text
+  (text was clipped). All re-verified by crop zoom.
+- Self-check: full-size + 300px downscale + crops of both medium rows and
+  the brief columns — no overflow, overlap, clipped or garbled text.
+  At 300px the page reads as three big lead pictures + dark medium rows +
+  map/briefs list; date, strip numbers and lead headlines stay legible.
+- Module-12 fix (after the v5 render above): the "SCIOPERO" text was
+  removed from the protest banner inside the art — it was clipped at the
+  44 px art-box edge (the chip above the art already carries
+  "SCIOPERO · 100 SQUARES", so no information is lost). New `entry.png`:
+  263,726 bytes, sha256
+  7027866946deb70b94cd855a54548f2f29457628170ddd3178cd46e54bc6fdd1
+  (1024×1024). Determinism re-verified: two main.ts runs, identical sha256.
