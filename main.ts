@@ -1,6 +1,6 @@
-// main.ts — entrypoint for the news-image-20261120 v6 poster.
+// main.ts — entrypoint for the news-image-20261120 v7 poster.
 //
-// The poster is fully rendered at build time by poster/build_poster_v6.py and
+// The poster is fully rendered at build time by poster/build_poster_v7.py and
 // stored beside this file as entry.png. This program does no drawing and
 // touches no network: it only publishes those exact bytes to the output
 // directory the grader provides, so two runs always write identical bytes.
@@ -14,6 +14,6 @@ import { join } from "node:path";
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 const source = new URL("./entry.png", import.meta.url);
 if (!existsSync(source)) {
-  throw new Error("entry.png missing beside main.ts — re-render with poster/build_poster_v6.py first");
+  throw new Error("entry.png missing beside main.ts — re-render with poster/build_poster_v7.py first");
 }
 copyFileSync(source, join(outputDir, "entry.png"));
