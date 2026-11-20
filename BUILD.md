@@ -550,3 +550,99 @@ output. `main.ts` only copies `entry.png` to
   with: (1) the date rail is 4px from its limit — any longer item
   would overflow; (2) the map's minor graticule is still dense at
   full size, though it reads as a real map and is clean at 300px.
+
+## v7 — rank-1 skeleton, corrected numbers (owner order 2026-11-20 21:03 WIB "Bangun v7 — kerangka rank 1, angka dikoreksi")
+- Builder: `poster/build_poster_v7.py` (fresh script; v6r3 intact as
+  fallback). `main.ts` comment + error message updated to v7;
+  `entry.png` rendered from v7. Build only — no repo, push, bundle,
+  commit or submit.
+- Model: rank-1 entry 888dao-sats (submission 01a1f778, rate 0.991652,
+  742,756 bytes), verified from its artifact URL
+  (artifact.webp sha256 6a9aea97…). The owner also supplied a corrected
+  variant of the same skeleton (uploaded PNG, sha 073f1084… — NOT rank 1,
+  2, 3 or 5 by pixel-diff; an unidentified corrected clone). v7 mirrors
+  rank 1's LAYOUT and story list exactly and takes the corrections from
+  the owner's variant + prior verified research:
+  - Masthead row, big serif title "Friday 20 November 2026", italic red
+    subline (Akvan first), 6-box strip, region chips, 3 leads (Akvan 01,
+    Kyiv 02, COP31 03), 5+5 mediums (04–13), dark map + 23 briefs in two
+    columns (14–24 / 25–36), DATE CHECK box, one-line footer.
+  - Masthead stays FRIDAY'S LEDGER (owner's originality rule; "THE WORLD
+    IN ONE DAY" is used by 1,259 entries).
+  - Key finding that drove v7: rank 1 is STRICT on dates — Anthropic,
+    GTA VI, ICJ, Shenzhen appear NOWHERE as Friday stories; they are
+    listed in the DATE CHECK box instead. That reverses the v6
+    rewardline-teardown conclusion ("we were too strict on dates").
+    v7 restores the DATE CHECK box (dropped in v6) and drops the
+    date-blur blockbusters from the story list.
+- Corrections applied (rank 1 → v7):
+  1. Akvan winds 70–80 gusting 90 (rank 1: 90–100/110); landfall band
+     "LANDFALL 08:30 IST · GUSTS 90 KM/H" (rank 1: "LANDFALL · GUSTS
+     110 KM/H"); body is the owner's variant ("crossed the coast
+     about 08:30 weakened… No major damage by midday").
+  2. Kyiv lead is bridges-first: headline "Missiles hit Kyiv's Dnipro
+     bridges; three killed" (owner's variant); art band "01:25 LOCAL ·
+     3 BRIDGES HIT" (rank 1: "7 WAVES" — unverified, dropped); "~30
+     MISSILES" kept top-right.
+  3. CPI 2.2% CORE everywhere (rank 1 strip + medium used the 2.3%
+     headline; 2.3% was the forecast, core printed 2.2%). Strip box 4
+     "2.2% / Japan Oct core CPI, BoJ eyed"; medium 07 "Japan core
+     inflation quickens to 2.2%".
+  4. Market CLOSES, not intraday: Nikkei −5.1%, KOSPI −5.2%, TAIEX
+     −6.2% (rank 1: −4.5%/−4.7% intraday; verified closes Nikkei
+     −5.06% at 56,436.65, Kospi −5.21%, Taiex −6.23%).
+  5. EU–UK summit is the SECOND (rank 1 + owner variant both say
+     "first"; first was London, 19 May 2025). Medium 06: "Burnham
+     holds second EU–UK reset summit".
+  6. No "beats chemo alone" claim (rank 1); medium 13 body uses the
+     owner's softened wording ("against 23–42% for chemotherapy
+     alone").
+  7. DATE CHECK Senate vote 51–48 (rank 1 printed 48–51 reversed).
+     The other six DATE CHECK items are rank 1's (Shenzhen summit,
+     Anthropic $83 IPO, ICJ verdict, GTA VI launch, Van Gogh $190.4m,
+     Voyager 1 one light-day).
+  8. Hormuz brief (28) fuller, owner's correction: "Four attacks on
+     vessels in 96 hours; 46 ships wait as the strait shuts down
+     (UKMTO)" (rank 1: "maritime centre says").
+  9. Region chips reproduced exactly as rank 1 prints them (EUROPE 7,
+     AMERICAS 8, ASIA-PACIFIC 10, MIDEAST 3, AFRICA 3, OCEANIA 4,
+     WORLD / SPACE 1) — note: a hand recount of rank 1's list gives
+     Europe 8 / Americas 7 / APAC 9 / Mideast 2 / Oceania 5 / World 2
+     (COP31→Mideast and Bougainville→APAC reconcile most of it); the
+     printed chips are kept as layout.
+- Art: all 13 illustrations re-drawn for the rank-1 skeleton (dark-sea
+  cyclone spiral + Odisha coast, night skyline + missile trails, COP31
+  globe + thermometer + red box, 10 small medium panels, dark navy
+  world map with tan continents, red pins, gold rings on 1–3, SPACE
+  inset, legend). Richness pass: stipple inside every art panel
+  (step 3, density 0.5–0.7) + a final newsprint top-grain over the
+  finished page (step 2, density 0.30, amp ±2, seed 99) — the
+  file-size lever, same idea as v6.2's 668KB overshoot.
+- `entry.png`: 652,197 bytes, sha256
+  f4a415d956d0962f4f7339771d203f0284b3fc5ed045640396ce8788b38a1b0c
+  (1024×1024). Determinism verified: two runs byte-identical
+  (sha256 match). 36 stories, 36/36 source-tagged. No layout warnings
+  (all headlines ≤2 lines, lead bodies ≤4 lines, medium bodies ≤3
+  lines, briefs ≤2 lines, DATE CHECK 2 lines, footer fits one line).
+- Self-check: full-size + 300px downscale viewed — no overflow,
+  overlap, clipped or garbled text. Title, strip, lead art and DATE
+  CHECK all read at 300px; grain disappears at 300px as designed.
+  Gopalpur label moved onto the land (left of the red dot) after the
+  first render showed it half-over the dark sea.
+- Caveats for the manager's review (not silently resolved):
+  (a) Kyiv "three killed / about 15 injured" is the owner's variant
+  wording; our own verified research said ≥5 killed (3 Kyiv, 2 Lviv).
+  The owner wrote "three killed" and the build spec said to use the
+  bridges-first headline — kept as written, flagging the conflict.
+  (b) The 23–42% chemo comparison in medium 13 is unverified per our
+  research (only the 60.7% response + 61 patients, early phase I/II,
+  is verified); kept in the owner's softened "against" wording.
+  (c) Briefs 26 (Fiona the hippo) and 35 (Thomas Markle) are rank 1's
+  list, mirrored exactly; our research had dropped Fiona as 19-Nov /
+  unverified.
+  (d) "423 rescue teams deployed" and "schools shut" (Akvan body) and
+  "MSCI Asia-Pacific down 7%" (strip box 3, "Asia shares' worst week
+  since 2020") are rank-1 claims, not independently re-verified.
+  (e) File size 652KB is below rank 1's 742KB — the art is rich but
+  not a byte-for-byte richness match; further grain would only add
+  noise, not signal.
