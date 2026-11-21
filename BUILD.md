@@ -646,3 +646,11 @@ output. `main.ts` only copies `entry.png` to
   (e) File size 652KB is below rank 1's 742KB — the art is rich but
   not a byte-for-byte richness match; further grain would only add
   noise, not signal.
+
+## v8 — "THE WORLD IN ONE DAY" (replication recipe) — 21 Nov 2026
+
+- Built 2026-11-20 22:13 WIB from the owner's replication-recipe prompt (top-ranked poster recipe; claimed 0.9865 dev / provisional top-15 on the main account). Builder session fresh, generator written from the prompt only (no existing build script read).
+- Masthead "THE WORLD IN ONE DAY" (rank 1's; owner chose the recipe), strap "Missiles hit Kyiv's bridges · Cyclone Akvan ashore in India · An AI sell-off sinks Asia · COP31 deadlocked on its final day". Strip of 6, region bar EUROPE 8 / AMERICAS 7 / ASIA-PACIFIC 9 / MIDEAST 3 / AFRICA 3 / OCEANIA 4 / WORLD-SPACE 2 (36 total). 3 leads (Kyiv "three killed", Akvan landfall 08:30 IST, intraday index table), 10 features, dark navy map from real coordinates (equirectangular projection) + 23 briefs, DATE CHECK box.
+- Recipe numbers used verbatim despite verified corrections ("first" EU–UK summit, Senate 48–51, chemo "vs 23–42%", Nikkei −4.9% intraday) — owner chose the recipe.
+- `poster/build_poster_v8.py`: 725 lines, PIL (not HTML/CSS headless as the recipe suggested). `entry.png`: 269,324 bytes, sha256 8f2c2ef9310a30035fb9f9985c1f533b4cc0c4b059a3fc292ecf7e7f558b3d87 (1024×1024). Determinism verified: 3 runs byte-identical.
+- Owner approved v8 for submit 2026-11-20 22:17 WIB; submit 2026-11-21 (quota reopened after reputation exhaustion blocked the 07:15 WIB attempt).
